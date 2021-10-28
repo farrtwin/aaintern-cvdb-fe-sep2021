@@ -4,7 +4,7 @@ const VaccinatedToday = () => {
     return (
         <div style={{color:'#2E86C1'}}>
             <h2 style={{color:'#2E86C1'}}>0</h2>
-            <hr style={{ margin:'12px 25% 12px 25% '}}/>
+            <hr style={{ margin:'12px 25% 12px 25% ', borderTop: '1px solid #2E86C1'}}/>
             Vaccinated Today
 
         </div>

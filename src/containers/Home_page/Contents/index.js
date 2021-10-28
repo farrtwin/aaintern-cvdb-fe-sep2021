@@ -87,10 +87,10 @@ const Content = () => {
 
                         <div className="column is-12-tablet is-6-desktop">
 
-                            <div className="card">
+                            <div className="card has-background-warning-light" >
                                 <div className="card-content" style={{ padding: '12px' }}>
-                                    <div className="content" >
-                                        vacince
+                                    <div className="content" style={{paddingTop:'25px'}} >
+                                      
 
                                         <div className="columns ">
 
