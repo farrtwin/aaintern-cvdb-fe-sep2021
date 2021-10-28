@@ -1,13 +1,14 @@
 import React from 'react'
+import { FaCertificate } from "react-icons/fa";
 
 const Vaccination = () => {
     return (
         <div>
-            <div className="card has-background-link" style={{padding:'12px'}}>
+            <div className="card has-background-link" style={{ padding: '12px' }}>
                 <div className="card-content" style={{ padding: '12px' }}>
                     <div className="content" >
                         <div className="columns">
-                            <div className="column is-3-tablet is-2-desktop has-text-white" style={{paddingTop:'18px'}}>
+                            <div className="column is-3-tablet is-2-desktop has-text-white" style={{ paddingTop: '18px' }}>
                                 <p>Vaccination</p>
                             </div>
 
@@ -20,7 +21,15 @@ const Vaccination = () => {
                             </div>
 
                             <div className="column is-3-tablet is-4-desktop">
-                                <button className="button" style={{ width: '100%' }}>Vaccination Certificate</button>
+
+                                <button className="button" style={{ width: '100%' }}>
+
+                                    <span className="icon" style={{paddingLeft:'6px'}}>
+                                        <FaCertificate size={16} />
+                                    </span>
+                                    <span>Vaccination Certificate</span>
+
+                                </button>
                             </div>
 
                         </div>
