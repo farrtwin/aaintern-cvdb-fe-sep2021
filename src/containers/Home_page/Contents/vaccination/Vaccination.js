@@ -3,11 +3,11 @@ import React from 'react'
 const Vaccination = () => {
     return (
         <div>
-            <div className="card">
+            <div className="card has-background-link" style={{padding:'12px'}}>
                 <div className="card-content" style={{ padding: '12px' }}>
                     <div className="content" >
                         <div className="columns">
-                            <div className="column is-3-tablet is-2-desktop">
+                            <div className="column is-3-tablet is-2-desktop has-text-white" style={{paddingTop:'18px'}}>
                                 <p>Vaccination</p>
                             </div>
 

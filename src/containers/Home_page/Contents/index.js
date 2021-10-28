@@ -45,9 +45,9 @@ const Content = () => {
                         {/* column 3 */}
                         <div className="column is-12-tablet is-6-desktop">
 
-                            <div className="card">
-                                <div className="card-content" style={{ padding: '12px' }}>
-                                    <div className="content" >
+                            <div className="card ">
+                                <div className="card-content " style={{ padding: '12px' }}>
+                                    <div className="content " >
                                         Vaccination Dose Status
 
                                         <div className="columns ">
@@ -90,7 +90,7 @@ const Content = () => {
                             <div className="card">
                                 <div className="card-content" style={{ padding: '12px' }}>
                                     <div className="content" >
-                                        Vaccination Dose Status
+                                        vacince
 
                                         <div className="columns ">
 
