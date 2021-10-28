@@ -26,7 +26,7 @@ const StatusInfor = () => {
 
                             <tbody>
                                 <tr>
-                                    <td style={{ textAlign: 'start', paddingLeft: '16px' }}>Vientiane </td>
+                                    <td>Vientiane </td>
                                     <td>2333</td>
                                     <td>3333</td>
                                     <td>5666</td>
