@@ -32,6 +32,8 @@ const App = () => {
                 Learn React
                 </a>
             </header>
+            <button className="button">Button</button>
+
         </div>
     );
 }

@@ -13,6 +13,7 @@ import thunk from 'redux-thunk'
 import rootReducer from './reducers'
 
 import Routes from 'routes'
+import 'bulma/css/bulma.css'
 
 const store = createStore(
     rootReducer,

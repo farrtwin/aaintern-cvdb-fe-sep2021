@@ -14,6 +14,7 @@ import PrivateRoute from './auth/PrivateRoute'
 import App from 'containers/App'
 import Admin from 'containers/Admin'
 import Login from 'containers/Login'
+import HomePage from 'containers/Home_page'
 
 const Routes = () => {
 
@@ -23,6 +24,10 @@ const Routes = () => {
                 <Switch>
 
                     <Route path="/" exact>
+                        <HomePage/>
+                    </Route>
+                    
+                    <Route path="/App">
                         <App/>
                     </Route>
 
