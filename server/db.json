@@ -175,96 +175,96 @@
       "vaccine_charts": [
         {
           "vaccine_date": "01/10/2021",
-          "vaccine_dose_one": "134",
-          "vaccine_dose_two": "12"
+          "vaccine_dose_one": 134,
+          "vaccine_dose_two": 12
         },        
         {
           "vaccine_date": "02/10/2021",
-          "vaccine_dose_one": "235",
-          "vaccine_dose_two": "123"
+          "vaccine_dose_one": 235,
+          "vaccine_dose_two": 123
         },
         {
           "vaccine_date": "03/10/2021",
-          "vaccine_dose_one": "345",
-          "vaccine_dose_two": "232"
+          "vaccine_dose_one": 345,
+          "vaccine_dose_two": 232
         },
         {
           "vaccine_date": "04/10/2021",
-          "vaccine_dose_one": "567",
-          "vaccine_dose_two": "23"
+          "vaccine_dose_one": 567,
+          "vaccine_dose_two": 23
         },        
         {
           "vaccine_date": "05/10/2021",
-          "vaccine_dose_one": "234",
-          "vaccine_dose_two": "24"
+          "vaccine_dose_one": 234,
+          "vaccine_dose_two": 24
         },
         {
           "vaccine_date": "06/10/2021",
-          "vaccine_dose_one": "324",
-          "vaccine_dose_two": "43"
+          "vaccine_dose_one": 324,
+          "vaccine_dose_two": 43
         },
         {
           "vaccine_date": "07/10/2021",
-          "vaccine_dose_one": "123",
-          "vaccine_dose_two": "43"
+          "vaccine_dose_one": 123,
+          "vaccine_dose_two": 43
         }
       ],
       "case_charts": [
         {
           "case_date": "01/10/2021",
-          "active_case": "134",
-          "total_case": "452",
-          "recovered_case": "2",
-          "death_case": "1",
-          "tested_case": "700"
+          "active_case": 134,
+          "total_case": 452,
+          "recovered_case": 2,
+          "death_case": 1,
+          "tested_case": 700
         },        
         {
           "case_date": "02/10/2021",
-          "active_case": "235",
-          "total_case": "345",
-          "recovered_case": "12",
-          "death_case": "6",
-          "tested_case": "750"
+          "active_case": 235,
+          "total_case": 345,
+          "recovered_case": 12,
+          "death_case": 6,
+          "tested_case": 750
         },
         {
           "case_date": "03/10/2021",
-          "active_case": "345",
-          "total_case": "1241",
-          "recovered_case": "34",
-          "death_case": "1",
-          "tested_case": "800"
+          "active_case": 345,
+          "total_case": 1241,
+          "recovered_case": 34,
+          "death_case": 1,
+          "tested_case": 800
         },
         {
           "case_date": "04/10/2021",
-          "active_case": "523",
-          "total_case": "1434",
-          "recovered_case": "144",
-          "death_case": "5",
-          "tested_case": "850"
+          "active_case": 523,
+          "total_case": 1434,
+          "recovered_case": 144,
+          "death_case": 5,
+          "tested_case": 850
         },        
         {
           "case_date": "05/10/2021",
-          "active_case": "1234",
-          "total_case": "4121",
-          "recovered_case": "2",
-          "death_case": "3",
-          "tested_case": "870"
+          "active_case": 1234,
+          "total_case": 4121,
+          "recovered_case": 2,
+          "death_case": 3,
+          "tested_case": 870
         },
         {
           "case_date": "06/10/2021",
-          "active_case": "3123",
-          "total_case": "5423",
-          "recovered_case": "546",
-          "death_case": "34",
-          "tested_case": "900"
+          "active_case": 3123,
+          "total_case": 5423,
+          "recovered_case": 546,
+          "death_case": 34,
+          "tested_case": 900
         },
         {
           "case_date": "07/10/2021",
-          "active_case": "2344",
-          "total_case": "4365",
-          "recovered_case": "5",
-          "death_case": "1",
-          "tested_case": "950"
+          "active_case": 2344,
+          "total_case": 4365,
+          "recovered_case": 5,
+          "death_case": 1,
+          "tested_case": 950
         }
       ]
     

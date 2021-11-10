@@ -5,13 +5,13 @@ const TotalVacinationDose2 = () => {
 
     const fetchTotalVacinationDose2 = () => {
         //fetch API
-        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/total_vaccination_dose_2`, {
+        fetch(`${process.env.REACT_APP_DOMAIN_PRODUCTION}/total_vaccination_dose2`, {
             method: "GET",
         })
             .then((res) => res.json())
             .then((res) => {
                 //set data to state
-                setDataTotalVacinationDose2(res[0]);
+                setDataTotalVacinationDose2(res.data[0]);
 
 
                 // console.log(res[0].graph[3].confirmed) //bg infor
@@ -28,7 +28,7 @@ const TotalVacinationDose2 = () => {
 
                 <div className="card-content" style={{ padding: '12px' }}>
                     <div className="content" >
-                        <h2 style={{ color: '#2980B9 ' }}>{dataTotalVacinationDose2.total_vaccination_dose_2}</h2>
+                        <h2 style={{ color: '#2980B9 ' }}>{dataTotalVacinationDose2.TOTAL_VACCINATION_DOSE_2}</h2>
                         Total Vacination Dose2
                     </div>
                 </div>

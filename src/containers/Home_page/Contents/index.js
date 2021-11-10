@@ -146,7 +146,7 @@ const Content = () => {
                         </div>
                     </div>
                     <div style={{ padding: '12px' }}>
-                        <h1 className="title" style={{ margin: '0px' }} >Laos</h1>
+                        <h1 className="title" style={{ margin: '0px', color:'#1D50B1'}} > <b>Laos</b> </h1>
                         <p >As on: 13 Oct 2021, 8: 00 IST (GMT+5: 30)</p>
                     </div>
 
