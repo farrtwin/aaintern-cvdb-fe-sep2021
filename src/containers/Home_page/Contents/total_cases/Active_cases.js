@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ActiveCase = () => {
+    const [dataActiveCase, setDataActiveCase] = useState({});
+
+    const fetchActiveCase = () => {
+        //fetch API
+        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/active_case`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                //set data to state
+                setDataActiveCase(res[0]);
+
+
+                // console.log(res[0].graph[3].confirmed) //bg infor
+            })
+            .catch((err) => { });
+    };
+
+    useEffect(() => {
+        fetchActiveCase()
+    }, [])
     return (
         <div>
             <div className="card" style={{ backgroundColor: '#D68910', padding: '6px' }}>
@@ -13,8 +34,8 @@ const ActiveCase = () => {
 
                     <div className="content" >
 
-                        <h2 style={{ margin: '0px', color: '#873600' }}>0</h2>
-                        <h3 style={{ margin: '0px', color: '#873600' }}>0</h3>
+                        <h2 style={{ margin: '0px', color: '#873600' }}>{dataActiveCase.total_case_today}</h2>
+                        <h3 style={{ margin: '0px', color: '#873600' }}>{dataActiveCase.active_case}</h3>
 
                     </div>
                 </div>

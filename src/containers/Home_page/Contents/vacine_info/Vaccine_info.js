@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { AiFillCaretUp } from "react-icons/ai";
 
 const VaccineInfo = () => {
+
+    const [dataVaccineInfo, setDataVaccineInfo] = useState([]);
+
+    const fetchVaccineInfo = () => {
+        //fetch API
+        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/vaccine_province`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                //set data to state
+                setDataVaccineInfo(res);
+            })
+            .catch((err) => { });
+    };
+    useEffect(() => {
+        fetchVaccineInfo()
+    }, [])
+
     return (
         <div>
             <div className="card" style={{ textAlign: 'center', padding: '0px', overflow: 'auto' }}>
@@ -9,6 +29,7 @@ const VaccineInfo = () => {
                         <table className="table">
                             <thead>
                                 <tr>
+                                    <th>No.</th>
                                     <th>Province</th>
                                     <th>Dose 1</th>
                                     <th>Dose 2</th>
@@ -19,35 +40,33 @@ const VaccineInfo = () => {
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td>Vientiane </td>
-                                    <td>2333</td>
-                                    <td>3333</td>
-                                    <td>5666</td>
+                                {
+                                    dataVaccineInfo.map((vc, i) => (
+                                        <tr key={i + 1}>
+                                            <td>{i + 1}</td>
+                                            <td>{vc.province_name} </td>
+                                            <td>
+                                                {vc.vaccine_dose_one} 
+                                                {/* <HiChevronDoubleUp color='green' className="mx-2" />  */}
+                                                <AiFillCaretUp color='lightgreen' className="mx-2" /> 
+                                                {vc.vaccine_dose_one_today}
+                                            </td>
 
-                                </tr>
-                                <tr>
-                                    <td>Luaang Prabang </td>
-                                    <td>2333</td>
-                                    <td>3333</td>
-                                    <td>5666</td>
+                                            <td>
+                                                {vc.vaccine_dose_two}
+                                                <AiFillCaretUp color='lightgreen' className="mx-2" /> 
+                                                {vc.vaccine_dose_two_today}
+                                            </td>
+                                            <td>
+                                                {vc.vaccine_total}
+                                                <AiFillCaretUp color='lightgreen' className="mx-2" /> 
+                                                {vc.vaccine_total_today}
 
-                                </tr>
-                                <tr>
-                                    <td>Savanhnakhet </td>
-                                    <td>2333</td>
-                                    <td>3333</td>
-                                    <td>5666</td>
+                                            </td>
 
-                                </tr>
-                                <tr>
-                                    <td>Champasak </td>
-                                    <td>2333</td>
-                                    <td>3333</td>
-                                    <td>5666</td>
-
-                                </tr>
-
+                                        </tr>
+                                    ))
+                                }
 
                             </tbody>
                         </table>

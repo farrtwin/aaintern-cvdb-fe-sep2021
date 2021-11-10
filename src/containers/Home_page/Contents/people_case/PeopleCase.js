@@ -1,417 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-   
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1000,
-        recovered: 2000,
-        active: 3181,
-        tested: 4014,
-        total: 5050,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2700,
-        active: 3981,
-        tested: 4814,
-        total: 5950,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1880,
-        recovered: 2210,
-        active: 3981,
-        tested: 4784,
-        total: 5550,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1300,
-        recovered: 2560,
-        active: 3451,
-        tested: 4954,
-        total: 5999,
-        
-    },
-    {
-        name: 'Page E',
-        death: 1210,
-        recovered: 2240,
-        active: 3671,
-        tested: 4897,
-        total: 5889,
-        
-    },
-   
-];
 
 const PeopleCase = () => {
+
+    const [dataPeopleCase, setDataPeopleCase] = useState([]);
+
+    const fetchPeopleCase = () => {
+        //fetch API
+        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/case_charts`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => {
+               
+                setDataPeopleCase(res);
+
+            })
+            .catch((err) => { });
+    };
+
+    useEffect(() => {
+        fetchPeopleCase()
+    }, [])
+
     const DataFormater = number => {
         if (number > 1000000000) {
             return (number / 1000000000).toString() + ' B'
@@ -437,7 +49,7 @@ const PeopleCase = () => {
                             <BarChart
                                 width={500}
                                 height={250}
-                                data={data}
+                                data={dataPeopleCase}
                                 margin={{
                                     top: 20,
                                     right: 30,
@@ -447,15 +59,15 @@ const PeopleCase = () => {
                             >
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis
-                                    dataKey="name"
+                                    dataKey="case_date"
                                     tickLine={false}
                                     axisLine={false}
                                     xAxisId={0}
                                 />
-                                <XAxis dataKey="name" xAxisId={1} hide />
-                                <XAxis dataKey="name" xAxisId={2} hide />
-                                <XAxis dataKey="name" xAxisId={3} hide />
-                                <XAxis dataKey="name" xAxisId={4} hide />
+                                <XAxis dataKey="case_date" xAxisId={1} hide />
+                                <XAxis dataKey="case_date" xAxisId={2} hide />
+                                <XAxis dataKey="case_date" xAxisId={3} hide />
+                                <XAxis dataKey="case_date" xAxisId={4} hide />
                                 <YAxis
                                     axisLine={false}
                                     tickLine={false}
@@ -471,41 +83,42 @@ const PeopleCase = () => {
                                         new Intl.NumberFormat('en').format(value)
                                     }
                                 />
-                                <Legend />
+                                
                                 <Bar
-                                    dataKey="total"
+                                    dataKey="total_case"
                                     name="Total Case"
                                     xAxisId={2}
                                     stackId="2"
-                                    fill="#CCCCFF"
+                                    fill="#FAF2E5"
                                 />
                                 <Bar
-                                    dataKey="tested"
+                                    dataKey="tested_case"
                                     name="Tested Case"
                                     xAxisId={3}
                                     stackId="3"
-                                    fill="#DC7633 "
+                                    fill="#79C7E0"
                                 />
                                 <Bar
-                                    dataKey="active"
+                                    dataKey="active_case"
                                     name="Active Case"
                                     xAxisId={4}
                                     stackId="4"
-                                    fill="#2ECC71"
+                                    fill="#D3A70F"
                                 />
                                 <Bar
-                                    dataKey="recovered"
+                                    dataKey="recovered_case"
                                     name="Recovered Case"
                                     xAxisId={1}
-                                    fill="#40E0D0"
+                                    fill="#B1EF8D"
                                 />
                                 <Bar
-                                    dataKey="death"
+                                    dataKey="death_case"
                                     name="Death Case"
                                     xAxisId={0}
                                     stackId="1"
-                                    fill="#85C1E9 "
+                                    fill="#FE8683"
                                 />
+                                <Legend />
 
                             </BarChart>
 

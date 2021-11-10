@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const VaccinatedToday = () => {
+    const [dataVaccinatedToday, setDataVaccinatedToday] = useState({});
+
+    const fetchVaccinatedToday = () => {
+        //fetch API
+        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/vaccinated_today`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                //set data to state
+                setDataVaccinatedToday(res[0]);
+              
+               
+                // console.log(res[0].graph[3].confirmed) //bg infor
+            })
+            .catch((err) => { });
+    };
+
+    useEffect(() => {
+        fetchVaccinatedToday()
+    }, [])
     return (
-        <div style={{color:'#2E86C1'}}>
-            <h2 style={{color:'#2E86C1'}}>0</h2>
-            <hr style={{ margin:'12px 25% 12px 25% ', borderTop: '1px solid #2E86C1'}}/>
+        <div style={{ color: '#2E86C1' }}>
+            <h2 style={{ color: '#2E86C1' }}>{dataVaccinatedToday.vaccinated_today}</h2>
+            <hr style={{ margin: '12px 25% 12px 25% ', borderTop: '1px solid #2E86C1' }} />
             Vaccinated Today
 
         </div>

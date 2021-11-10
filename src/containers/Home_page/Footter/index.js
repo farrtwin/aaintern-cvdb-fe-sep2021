@@ -14,7 +14,7 @@ const Footter = () => {
                             <div>
 
                                 {/* <p className="heading">AACOVIDLA</p> */}
-                                <p className="title">AACOVIDLA</p>
+                                <h1 className="">AACOVIDLA</h1>
 
                             </div>
                         </div>
@@ -22,21 +22,21 @@ const Footter = () => {
                         <div className="level-item has-text-centered">
                             <div>
 
-                                <p className="title">SITEMAP</p>
+                                <h4 className="">SITEMAP</h4>
                             </div>
                         </div>
 
                         <div className="level-item has-text-centered">
                             <div>
 
-                                <p className="title">Power by AA Digital</p>
+                                <h4 className="">POWER BY AA DIGITAL</h4>
                             </div>
                         </div>
 
                         <div className="level-item has-text-centered">
                             <div>
 
-                                <p className="title">Help</p>
+                                <h4 className="">HELP</h4>
 
                             </div>
                         </div>
@@ -44,7 +44,7 @@ const Footter = () => {
                         <div className="level-item has-text-centered">
                             <div>
 
-                                <p className="title">Follow As</p>
+                                <h4 className="">FOLLOW US</h4>
                                 <FaFacebookSquare size={32} />
                                 <FaTwitterSquare size={32} />
                                 <FaInstagramSquare size={32} />

@@ -3,6 +3,7 @@ import "./styles/index.css"
 
 
 const Header = () => {
+    // console.log(process.env.REACT_APP_DOMAIN_KEY)
     return (
         <div>
 

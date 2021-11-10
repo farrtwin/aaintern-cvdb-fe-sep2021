@@ -1,304 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 12400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 12210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 12290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 12000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 12181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 12500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 12100,
-    },
-];
+
 
 const VaccinationChart = () => {
+
+    const [dataVaccinationChart, setDataVaccinationChart] = useState([]);
+
+    const fetchVaccinationChart = () => {
+        //fetch API
+        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/vaccine_charts`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                //set data to state
+                setDataVaccinationChart(res);
+
+
+                // console.log(res[0].graph[3].confirmed) //bg infor
+            })
+            .catch((err) => { });
+    };
+
+    useEffect(() => {
+        fetchVaccinationChart()
+    }, [])
+
+
     const DataFormater = number => {
         if (number > 1000000000) {
             return (number / 1000000000).toString() + ' B'
@@ -328,7 +57,7 @@ const VaccinationChart = () => {
                             <BarChart
                                 width={500}
                                 height={250}
-                                data={data}
+                                data={dataVaccinationChart}
                                 margin={{
                                     top: 20,
                                     right: 30,
@@ -338,13 +67,13 @@ const VaccinationChart = () => {
                             >
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis
-                                    dataKey="name"
+                                    dataKey="vaccine_date"
                                     tickLine={false}
                                     axisLine={false}
                                     xAxisId={0}
                                 />
-                                <XAxis dataKey="name" xAxisId={1} hide />
-                                <XAxis dataKey="name" xAxisId={2} hide />
+                                <XAxis dataKey="vaccine_date" xAxisId={1} hide />
+                                <XAxis dataKey="vaccine_date" xAxisId={2} hide />
                                 <YAxis
                                     axisLine={false}
                                     tickLine={false}
@@ -360,27 +89,21 @@ const VaccinationChart = () => {
                                         new Intl.NumberFormat('en').format(value)
                                     }
                                 />
-                                <Legend />
+
                                 <Bar
-                                    dataKey="amt"
-                                    name="Total Vaccine"
-                                    xAxisId={2}
-                                    stackId="2"
-                                    fill="#CCCCFF"
-                                />
-                                <Bar
-                                    dataKey="pv"
-                                    name="Dose 2"
-                                    xAxisId={1}
-                                    fill="#40E0D0"
-                                />
-                                <Bar
-                                    dataKey="uv"
+                                    dataKey="vaccine_dose_one"
                                     name="Dose 1"
+                                    xAxisId={1}
+                                    fill="#9BE89C"
+                                />
+                                <Bar
+                                    dataKey="vaccine_dose_two"
+                                    name="Dose 2"
                                     xAxisId={0}
                                     stackId="1"
-                                    fill="#85C1E9 "
+                                    fill="#A5C9FD"
                                 />
+                                <Legend />
 
                             </BarChart>
 

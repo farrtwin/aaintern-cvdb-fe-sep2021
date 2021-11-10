@@ -1,0 +1,271 @@
+{
+    "vaccinated_today": [
+      {
+        "vaccinated_today": "4"
+      }
+    ],
+    "total_vaccination": [
+      {
+        "total_vaccination": "32"
+      }
+    ],
+    "total_vaccination_dose_1": [
+      {
+        "total_vaccination_dose_1": "22"
+      }
+    ],
+    "total_vaccination_dose_2": [
+      {
+        "total_vaccination_dose_2": "12"
+      }
+    ],
+  
+  
+    "total_case": [
+      {
+        "total_case": "0",
+        "total_case_today": "1234"
+      }
+    ],
+    "active_case": [
+      {
+        "active_case": "455",
+        "total_case_today": "344"
+      }
+    ],
+    "recovered_case": [
+      {
+        "recovered_case": "129",
+        "recovered_case_today": "55",
+        "recovered_case_ratio": "0"
+      }
+    ],
+    "deaths_case": [
+      {
+        "deaths_case": "76",
+        "deaths_case_today": "2",
+        "deaths_case_ratio": "0"
+      }
+    ],
+
+
+    "vaccine_province": [
+      {
+        "province_name": "ນະຄອນຫຼວງວຽງຈັນ",
+        "vaccine_dose_one": "0",
+        "vaccine_dose_one_today": "0",
+        "vaccine_dose_two": "0",
+        "vaccine_dose_two_today": "0",
+        "vaccine_total": "0",
+        "vaccine_total_today": "0"
+      },
+      {
+        "province_name": "ອັດຕະປື",
+        "vaccine_dose_one": "0",
+        "vaccine_dose_one_today": "0",
+        "vaccine_dose_two": "0",
+        "vaccine_dose_two_today": "0",
+        "vaccine_total": "0",
+        "vaccine_total_today": "0"
+      },
+      {
+        "province_name": "ຫຼວງພະບາງ",
+        "vaccine_dose_one": "0",
+        "vaccine_dose_one_today": "0",
+        "vaccine_dose_two": "0",
+        "vaccine_dose_two_today": "0",
+        "vaccine_total": "0",
+        "vaccine_total_today": "0"
+      },
+      {
+        "province_name": "ອຸດົມໄຊ",
+        "vaccine_dose_one": "0",
+        "vaccine_dose_one_today": "0",
+        "vaccine_dose_two": "0",
+        "vaccine_dose_two_today": "0",
+        "vaccine_total": "0",
+        "vaccine_total_today": "0"
+      },
+      {
+        "province_name": "ສະຫວັນນະເຂດ",
+        "vaccine_dose_one": "0",
+        "vaccine_dose_one_today": "0",
+        "vaccine_dose_two": "0",
+        "vaccine_dose_two_today": "0",
+        "vaccine_total": "0",
+        "vaccine_total_today": "0"
+      },
+      {
+        "province_name": "ຈຳປາສັກ",
+        "vaccine_dose_one": "0",
+        "vaccine_dose_one_today": "0",
+        "vaccine_dose_two": "0",
+        "vaccine_dose_two_today": "0",
+        "vaccine_total": "0",
+        "vaccine_total_today": "0"
+      }
+    ],
+
+    "covid_case_province": [
+        {
+          "province_name": "ນະຄອນຫຼວງວຽງຈັນ",
+          "total_case": "0",
+          "total_case_today": "0",
+          "test_case": "0",
+          "test_case_today": "0",
+          "active_case": "0",
+          "active_case_today": "1",
+          "recovered_case": "0",
+          "recovered_case_today": "0",
+          "death_case": "0",
+          "death_case_today": "0",
+          "active_ratio": "0",
+          "recovered_ratio": "0",
+          "death_rato": "0"
+        },
+        {
+            "province_name": "ຫຼວງພະບາງ",
+            "total_case": "0",
+            "total_case_today": "0",
+            "test_case": "0",
+            "test_case_today": "0",
+            "active_case": "0",
+            "active_case_today": "-1",
+            "recovered_case": "0",
+            "recovered_case_today": "0",
+            "death_case": "0",
+            "death_case_today": "0",
+            "active_ratio": "0",
+            "recovered_ratio": "0",
+            "death_rato": "0"
+          },
+          {
+            "province_name": "ອຸດົມໄຊ",
+            "total_case": "0",
+            "total_case_today": "0",
+            "test_case": "0",
+            "test_case_today": "0",
+            "active_case": "0",
+            "active_case_today": "0",
+            "recovered_case": "0",
+            "recovered_case_today": "0",
+            "death_case": "0",
+            "death_case_today": "0",
+            "active_ratio": "0",
+            "recovered_ratio": "0",
+            "death_rato": "0"
+          },
+          {
+            "province_name": "ສະຫວັນນະເຂດ",
+            "total_case": "0",
+            "total_case_today": "0",
+            "test_case": "0",
+            "test_case_today": "0",
+            "active_case": "0",
+            "active_case_today": "0",
+            "recovered_case": "0",
+            "recovered_case_today": "0",
+            "death_case": "0",
+            "death_case_today": "0",
+            "active_ratio": "0",
+            "recovered_ratio": "0",
+            "death_rato": "0"
+          }
+      ],
+      "vaccine_charts": [
+        {
+          "vaccine_date": "01/10/2021",
+          "vaccine_dose_one": "134",
+          "vaccine_dose_two": "12"
+        },        
+        {
+          "vaccine_date": "02/10/2021",
+          "vaccine_dose_one": "235",
+          "vaccine_dose_two": "123"
+        },
+        {
+          "vaccine_date": "03/10/2021",
+          "vaccine_dose_one": "345",
+          "vaccine_dose_two": "232"
+        },
+        {
+          "vaccine_date": "04/10/2021",
+          "vaccine_dose_one": "567",
+          "vaccine_dose_two": "23"
+        },        
+        {
+          "vaccine_date": "05/10/2021",
+          "vaccine_dose_one": "234",
+          "vaccine_dose_two": "24"
+        },
+        {
+          "vaccine_date": "06/10/2021",
+          "vaccine_dose_one": "324",
+          "vaccine_dose_two": "43"
+        },
+        {
+          "vaccine_date": "07/10/2021",
+          "vaccine_dose_one": "123",
+          "vaccine_dose_two": "43"
+        }
+      ],
+      "case_charts": [
+        {
+          "case_date": "01/10/2021",
+          "active_case": "134",
+          "total_case": "452",
+          "recovered_case": "2",
+          "death_case": "1",
+          "tested_case": "700"
+        },        
+        {
+          "case_date": "02/10/2021",
+          "active_case": "235",
+          "total_case": "345",
+          "recovered_case": "12",
+          "death_case": "6",
+          "tested_case": "750"
+        },
+        {
+          "case_date": "03/10/2021",
+          "active_case": "345",
+          "total_case": "1241",
+          "recovered_case": "34",
+          "death_case": "1",
+          "tested_case": "800"
+        },
+        {
+          "case_date": "04/10/2021",
+          "active_case": "523",
+          "total_case": "1434",
+          "recovered_case": "144",
+          "death_case": "5",
+          "tested_case": "850"
+        },        
+        {
+          "case_date": "05/10/2021",
+          "active_case": "1234",
+          "total_case": "4121",
+          "recovered_case": "2",
+          "death_case": "3",
+          "tested_case": "870"
+        },
+        {
+          "case_date": "06/10/2021",
+          "active_case": "3123",
+          "total_case": "5423",
+          "recovered_case": "546",
+          "death_case": "34",
+          "tested_case": "900"
+        },
+        {
+          "case_date": "07/10/2021",
+          "active_case": "2344",
+          "total_case": "4365",
+          "recovered_case": "5",
+          "death_case": "1",
+          "tested_case": "950"
+        }
+      ]
+    
+  }

@@ -162,7 +162,9 @@ const Content = () => {
                         <div className="column is-12-tablet is-12-desktop">
                             <VaccinationChart />
                         </div>
+                        
                     </div>
+                   
 
 
 
