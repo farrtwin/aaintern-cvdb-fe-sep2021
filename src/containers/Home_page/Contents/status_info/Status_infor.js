@@ -7,13 +7,13 @@ const StatusInfor = () => {
 
     const fetchStatusInfor = () => {
         //fetch API
-        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/covid_case_province`, {
+        fetch(`${process.env.REACT_APP_DOMAIN_PRODUCTION}/covid_case_province`, {
             method: "GET",
         })
             .then((res) => res.json())
             .then((res) => {
                 //set data to state
-                setDataStatusInfor(res);
+                setDataStatusInfor(res.data);
             })
             .catch((err) => { });
     };
@@ -53,16 +53,19 @@ const StatusInfor = () => {
                                         <tr key={i + 1}>
                                             <td>{i + 1}</td>
                                             <td>{st.province_name} </td>
-                                            <td style={{width:'200px'}}>
+
+                                            <td>
                                                 {st.total_case}
                                                 <AiFillCaretUp color='red' className="mx-2" />
                                                 {st.total_case_today}
                                             </td>
+
                                             <td>
                                                 {st.test_case}
                                                 <AiFillCaretUp color='red' className="mx-2" />
                                                 {st.test_case_today}
                                             </td>
+
                                             <td>
                                                 {st.active_case}
                                                 {
@@ -88,24 +91,27 @@ const StatusInfor = () => {
                                                 }
 
                                             </td>
+
                                             <td>
                                                 {st.recovered_case}
                                                 <AiFillCaretUp color='lightgreen' className="mx-2" />
                                                 {st.recovered_case_today}
                                             </td>
+
                                             <td>
-                                                {st.death_case}
-                                                <AiFillCaretUp color='lightgreen' className="mx-2" />
-                                                {st.death_case_today}
+                                                {st.deaths_case}
+                                                <AiFillCaretUp color='red' className="mx-2" />
+                                                {st.deaths_case_today}
+                                            </td>
+
+                                            <td>
+                                                {st.active_ratio}
                                             </td>
                                             <td>
-                                                {st.active_ratio}%
+                                                {st.recovered_ratio}
                                             </td>
                                             <td>
-                                                {st.recovered_ratio}%
-                                            </td>
-                                            <td>
-                                                {st.death_rato}%
+                                                {st.deaths_ratio}
                                             </td>
 
                                         </tr>

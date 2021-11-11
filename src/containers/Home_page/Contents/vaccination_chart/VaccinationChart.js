@@ -12,17 +12,17 @@ const VaccinationChart = () => {
 
     const fetchVaccinationChart = () => {
         //fetch API
-        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/vaccine_charts`, {
+        fetch(`${process.env.REACT_APP_DOMAIN_PRODUCTION}/vaccine_charts`, {
             method: "GET",
         })
             .then((res) => res.json())
             .then((res) => {
                 //set data to state
-                setDataVaccinationChart(res);
-                let count_dost_1 = res.reduce((a, { vaccine_dose_one }) => a + vaccine_dose_one, 0)
+                setDataVaccinationChart(res.data);
+                let count_dost_1 = res.data.reduce((a, { vaccine_dose_one }) => a + vaccine_dose_one, 0)
                 setVaccineDoseOne(count_dost_1)
 
-                let count_dost_2 = res.reduce((a, { vaccine_dose_two }) => a + vaccine_dose_two, 0)
+                let count_dost_2 = res.data.reduce((a, { vaccine_dose_two }) => a + vaccine_dose_two, 0)
                 setVaccineDoseTwo(count_dost_2)
 
 

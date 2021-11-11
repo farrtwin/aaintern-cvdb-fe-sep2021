@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PeopleCase from './people_case/PeopleCase'
 import StatusInfor from './status_info/Status_infor'
 import ActiveCase from './total_cases/Active_cases'
@@ -15,6 +15,29 @@ import VaccinationChart from './vaccination_chart/VaccinationChart'
 import VaccineInfo from './vacine_info/Vaccine_info'
 
 const Content = () => {
+
+    const [dataTimeZone, setDataTimeZone] = useState({});
+
+    const fetchTimeZone = () => {
+        //fetch API
+        fetch(`${process.env.REACT_APP_DOMAIN_PRODUCTION}/time_on_case_charts`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                
+                setDataTimeZone(res.data[0]);
+
+            })
+            .catch((err) => { });
+    };
+
+    useEffect(() => {
+        fetchTimeZone()
+    }, [])
+
+
+
     return (
         <div className="container">
             {/* product info */}
@@ -39,7 +62,7 @@ const Content = () => {
 
                     </div>
 
-                    <p style={{ padding: '12px' }}>As on: 13 Oct 2021, 8: 00 IST (GMT+5: 30)</p>
+                    <p style={{ padding: '12px' }}>As on: {dataTimeZone.time}</p>
 
                     <div className="columns ">
                         {/* column 3 */}
@@ -147,7 +170,7 @@ const Content = () => {
                     </div>
                     <div style={{ padding: '12px' }}>
                         <h1 className="title" style={{ margin: '0px', color:'#1D50B1'}} > <b>Laos</b> </h1>
-                        <p >As on: 13 Oct 2021, 8: 00 IST (GMT+5: 30)</p>
+                        <p style={{ padding: '12px' }}>As on: {dataTimeZone.time}</p>
                     </div>
 
                     <div className="columns ">

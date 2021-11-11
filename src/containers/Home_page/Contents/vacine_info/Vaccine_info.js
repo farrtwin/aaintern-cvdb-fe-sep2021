@@ -7,13 +7,13 @@ const VaccineInfo = () => {
 
     const fetchVaccineInfo = () => {
         //fetch API
-        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/vaccine_province`, {
+        fetch(`${process.env.REACT_APP_DOMAIN_PRODUCTION}/vaccine_province`, {
             method: "GET",
         })
             .then((res) => res.json())
             .then((res) => {
                 //set data to state
-                setDataVaccineInfo(res);
+                setDataVaccineInfo(res.data);
             })
             .catch((err) => { });
     };
@@ -46,21 +46,21 @@ const VaccineInfo = () => {
                                             <td>{i + 1}</td>
                                             <td>{vc.province_name} </td>
                                             <td>
-                                                {vc.vaccine_dose_one} 
+                                                {vc.vaccin_dose_one} 
                                                 {/* <HiChevronDoubleUp color='green' className="mx-2" />  */}
                                                 <AiFillCaretUp color='lightgreen' className="mx-2" /> 
                                                 {vc.vaccine_dose_one_today}
                                             </td>
 
                                             <td>
-                                                {vc.vaccine_dose_two}
+                                                {vc.vaccin_dose_two}
                                                 <AiFillCaretUp color='lightgreen' className="mx-2" /> 
-                                                {vc.vaccine_dose_two_today}
+                                                {vc.vaccin_dose_two_today}
                                             </td>
                                             <td>
                                                 {vc.vaccine_total}
                                                 <AiFillCaretUp color='lightgreen' className="mx-2" /> 
-                                                {vc.vaccine_total_today}
+                                                {vc.vaccin_total_today}
 
                                             </td>
 

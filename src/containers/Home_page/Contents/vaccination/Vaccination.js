@@ -25,7 +25,7 @@ const Vaccination = () => {
                                 <button className="button" style={{ width: '100%' }}>
 
                                     <span className="icon" style={{paddingLeft:'6px'}}>
-                                        <FaCertificate size={16} />
+                                        <FaCertificate size={16} color='485FC7' />
                                     </span>
                                     <span>Vaccination Certificate</span>
 

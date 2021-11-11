@@ -28,7 +28,7 @@ const TotalVacinationDose1 = () => {
                 <div className="card-content" style={{ padding: '12px' }}>
                     <div className="content" >
                         <h2 style={{ color: '#45B39D ' }}>{dataTotalVacinationDose1.TOTAL_VACCINATION_DOSE1}</h2>
-                        Total Vacination Dose1
+                        Total Vacination Dose 1
                     </div>
                 </div>
             </div>

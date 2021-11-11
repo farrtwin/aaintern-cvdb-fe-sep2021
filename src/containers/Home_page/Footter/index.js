@@ -42,7 +42,7 @@ const Footter = () => {
                         </div>
 
                         <div className="level-item has-text-centered">
-                            <div>
+                            <div style={{marginTop:'30px'}}>
 
                                 <h4 className="">FOLLOW US</h4>
                                 <FaFacebookSquare size={32} />

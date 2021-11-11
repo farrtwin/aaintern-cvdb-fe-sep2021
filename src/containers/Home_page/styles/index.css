@@ -1,0 +1,9 @@
+@font-face {
+    font-family: NotoSansLao;
+    src: url("../assets/fonts/NotoSansLao-Regular.ttf");
+  }
+  
+  body {
+    font-family: NotoSansLao, sans-serif !important;
+    
+  }

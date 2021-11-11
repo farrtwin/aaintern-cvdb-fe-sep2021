@@ -15,27 +15,27 @@ const PeopleCase = () => {
 
     const fetchPeopleCase = () => {
         //fetch API
-        fetch(`${process.env.REACT_APP_DOMAIN_KEY}/case_charts`, {
+        fetch(`${process.env.REACT_APP_DOMAIN_PRODUCTION}/case_charts`, {
             method: "GET",
         })
             .then((res) => res.json())
             .then((res) => {
 
-                setDataPeopleCase(res);
+                setDataPeopleCase(res.data);
 
-                let count_total = res.reduce((a, { total_case }) => a + total_case, 0)
+                let count_total = res.data.reduce((a, { total_case }) => a + total_case, 0)
                 setDataTotalCase(count_total)
 
-                let count_active = res.reduce((a, { active_case }) => a + active_case, 0)
+                let count_active = res.data.reduce((a, { active_case }) => a + active_case, 0)
                 setDataActiveCase(count_active)
 
-                let count_recovered = res.reduce((a, { recovered_case }) => a + recovered_case, 0)
+                let count_recovered = res.data.reduce((a, { recovered_case }) => a + recovered_case, 0)
                 setDataRecoveredCase(count_recovered)
 
-                let count_death = res.reduce((a, { death_case }) => a + death_case, 0)
+                let count_death = res.data.reduce((a, { deaths_case }) => a + deaths_case, 0)
                 setDataDeathCase(count_death)
 
-                let count_tested = res.reduce((a, { tested_case }) => a + tested_case, 0)
+                let count_tested = res.data.reduce((a, { tested_case }) => a + tested_case, 0)
                 setDataTestedCase(count_tested)
 
 
@@ -81,7 +81,7 @@ const PeopleCase = () => {
                                         <div className="content" style={{ textAlign: 'start', paddingTop: '2px' }} >
 
                                             <span style={{ display: 'inline', color: 'black' }}>
-                                                TOTAL
+                                                Total
                                             </span>
 
                                             <span style={{ display: 'inline', marginLeft: '8px' }}>
@@ -106,7 +106,7 @@ const PeopleCase = () => {
                                         <div className="content" style={{ textAlign: 'start', paddingTop: '2px' }} >
 
                                             <span style={{ display: 'inline', color: 'black' }}>
-                                                ACTIVE
+                                                Active
                                             </span>
 
                                             <span style={{ display: 'inline', marginLeft: '8px' }}>
@@ -131,7 +131,7 @@ const PeopleCase = () => {
                                         <div className="content" style={{ textAlign: 'start', paddingTop: '2px' }} >
 
                                             <span style={{ display: 'inline', color: 'black' }}>
-                                                RECOVERED
+                                                Recovered Case
                                             </span>
 
                                             <span style={{ display: 'inline', marginLeft: '8px' }}>
@@ -156,7 +156,7 @@ const PeopleCase = () => {
                                         <div className="content" style={{ textAlign: 'start', paddingTop: '2px' }} >
 
                                             <span style={{ display: 'inline', color: 'black' }}>
-                                                DEATH
+                                                Death Case
                                             </span>
 
                                             <span style={{ display: 'inline', marginLeft: '8px' }}>
@@ -182,7 +182,7 @@ const PeopleCase = () => {
                                         <div className="content" style={{ textAlign: 'start', paddingTop: '2px' }} >
 
                                             <span style={{ display: 'inline', color: 'black' }}>
-                                                TESTED
+                                                Tested Case
                                             </span>
 
                                             <span style={{ display: 'inline', marginLeft: '8px' }}>
@@ -264,7 +264,7 @@ const PeopleCase = () => {
                                             fill="#B1EF8D"
                                         />
                                         <Bar
-                                            dataKey="death_case"
+                                            dataKey="deaths_case"
                                             name="Death Case"
                                             xAxisId={0}
                                             stackId="1"

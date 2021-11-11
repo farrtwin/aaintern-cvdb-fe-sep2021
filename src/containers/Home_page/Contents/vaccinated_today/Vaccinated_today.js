@@ -24,9 +24,15 @@ const VaccinatedToday = () => {
     }, [])
     return (
         <div style={{ color: '#2E86C1' }}>
-            <h2 style={{ color: '#2E86C1' }}>{dataVaccinatedToday.VACCINATED_TODAY}</h2>
+
+             <span style={{ color: '#2E86C1', fontSize: '30px', fontWeight: 'bold', marginRight: '24px' }}>
+                {dataVaccinatedToday.VACCINATED_TODAY}
+            </span>
+
+
             <hr style={{ margin: '12px 25% 12px 25% ', borderTop: '1px solid #2E86C1' }} />
-            Vaccinated Today
+            
+            VACCINATED TODAY
 
         </div>
 
