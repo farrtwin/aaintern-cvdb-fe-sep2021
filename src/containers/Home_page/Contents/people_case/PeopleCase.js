@@ -236,19 +236,20 @@ const PeopleCase = () => {
                                             }
                                         />
 
-                                        <Bar
-                                            dataKey="total_case"
-                                            name="Total Case"
-                                            xAxisId={2}
-                                            stackId="2"
-                                            fill="#D7BDE2"
-                                        />
+                                        
                                         <Bar
                                             dataKey="tested_case"
                                             name="Tested Case"
                                             xAxisId={3}
                                             stackId="3"
                                             fill="#79C7E0"
+                                        />
+                                        <Bar
+                                            dataKey="total_case"
+                                            name="Total Case"
+                                            xAxisId={2}
+                                            stackId="2"
+                                            fill="#D7BDE2"
                                         />
                                         <Bar
                                             dataKey="active_case"
