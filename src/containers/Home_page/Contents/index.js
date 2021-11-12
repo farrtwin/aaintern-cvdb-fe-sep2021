@@ -16,6 +16,7 @@ import VaccineInfo from './vacine_info/Vaccine_info'
 
 const Content = () => {
 
+    const [dataDateZone, setDataDateZone] = useState({});
     const [dataTimeZone, setDataTimeZone] = useState({});
 
     const fetchTimeZone = () => {
@@ -26,8 +27,11 @@ const Content = () => {
             .then((res) => res.json())
             .then((res) => {
                 
+                
                 setDataTimeZone(res.data[0]);
+                setDataDateZone(res.data[0]);
 
+               
             })
             .catch((err) => { });
     };
@@ -62,7 +66,7 @@ const Content = () => {
 
                     </div>
 
-                    <p style={{ padding: '12px' }}>As on: {dataTimeZone.case_date_and_time}</p>
+                    <p style={{ padding: '12px' }}>As on: {dataTimeZone.case_date}  {dataDateZone.case_time}</p>
 
                     <div className="columns ">
                         {/* column 3 */}
@@ -170,7 +174,7 @@ const Content = () => {
                     </div>
                     <div style={{ padding: '12px' }}>
                         <h1 className="title" style={{ margin: '0px', color:'#1D50B1'}} > <b>Laos</b> </h1>
-                        <p style={{ padding: '12px' }}>As on: {dataTimeZone.case_date_and_time}</p>
+                        <p style={{ padding: '12px' }}>As on: {dataTimeZone.case_date}  {dataDateZone.case_time}</p>
                     </div>
 
                     <div className="columns ">
